@@ -1,14 +1,18 @@
 const fibonacci = function(index) {
-  if(+index < 0) return "OOPS"
+  if(Number(index) < 0) return "OOPS"
+  index = Number(index)
+  // let previousNumber = 0;
+  // let currentNumber = 1;
+  let result = 0;
 
-  let previousNumber = 0;
-  let currentNumber = 1;
+  // for(let i = 0; i < index; i++){
+    // console.log(`previous number: ${previousNumber}`)
+    // console.log(`current number: ${currentNumber}`)
+// 
+  // }
+  result = Math.round(((1 + Math.sqrt(5)) ** index - (1 - Math.sqrt(5)) ** index) / (2 ** index * Math.sqrt(5)))
 
-  for(let i = 0; i < index; i++){
-    previousNumber = previousNumber + currentNumber, (previousNumber = currentNumber)   
-    console.log(`previous number: ${previousNumber}`)
-    console.log(`current number: ${currentNumber}`)
-  }
+  return result
 
 
 };
